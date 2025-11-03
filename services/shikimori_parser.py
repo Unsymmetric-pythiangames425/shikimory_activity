@@ -65,7 +65,13 @@ class ShikimoriParser:
             status_text = misc_div.get_text(strip=True)
 
             # Определяем онлайн статус
-            is_online = 'в сети' in status_text.lower() and 'назад' not in status_text.lower()
+            # Варианты онлайн: "сейчас на сайте", "в сети" (без "назад")
+            # Варианты оффлайн: "в сети: 8 минут назад", "в сети: 5 июля 2018"
+            is_online = (
+                'сейчас на сайте' in status_text.lower() or
+                ('в сети' in status_text.lower()
+                 and 'назад' not in status_text.lower())
+            )
 
             return {
                 'is_online': is_online,

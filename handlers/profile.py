@@ -71,6 +71,7 @@ async def process_username(message: Message, state: FSMContext):
         await status_msg.edit_text(
             f"❌ Профиль <b>{username}</b> не найден на Shikimori\n\n"
             "Проверьте правильность написания и попробуйте снова:",
+            reply_markup=cancel_keyboard(),  # ← Добавлено
             parse_mode='HTML'
         )
         return

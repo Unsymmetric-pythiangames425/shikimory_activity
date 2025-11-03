@@ -9,7 +9,7 @@ from database.models import TrackedProfile, TrackedProfile
 from sqlalchemy import select
 
 from services.shikimori_parser import parser
-                
+
 logger = logging.getLogger(__name__)
 
 
@@ -83,18 +83,13 @@ class ProfileTracker:
                 if profile:
                     result['was_online'] = profile.was_online
 
-                    # Проверяем изменение статуса (только если есть новая активность в истории)
-                    # Не отправляем уведомление просто за изменение времени "был в сети X минут назад"
-                    if profile.was_online != is_online and result['new_history']:
-                        result['online_changed'] = True
-                        logger.info(
-                            f"Изменение статуса для {shikimori_username}: {profile.was_online} -> {is_online}")
-                    # Если нет новой активности, но статус изменился с offline на online - уведомляем
-                    elif not profile.was_online and is_online:
+                    # Проверяем изменение статуса
+                    # Уведомляем когда пользователь входит в сеть
+                    if not profile.was_online and is_online:
                         result['online_changed'] = True
                         logger.info(
                             f"Пользователь {shikimori_username} вошёл в сеть")
-                    # Если был online и стал offline - уведомляем
+                    # Уведомляем когда пользователь выходит из сети
                     elif profile.was_online and not is_online:
                         result['online_changed'] = True
                         logger.info(
