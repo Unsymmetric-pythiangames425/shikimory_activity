@@ -1,11 +1,11 @@
 """Парсер данных с Shikimori"""
+import config
 import aiohttp
-from bs4 import BeautifulSoup
-from typing import Optional, List, Dict
 import asyncio
 import logging
 
-import config
+from bs4 import BeautifulSoup
+from typing import Optional, List, Dict
 
 logger = logging.getLogger(__name__)
 

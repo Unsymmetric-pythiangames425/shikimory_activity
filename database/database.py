@@ -1,11 +1,12 @@
 """Работа с базой данных"""
+import config
+
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy import select, delete
 from typing import Optional, List
 from datetime import datetime
 
 from database.models import Base, User, TrackedProfile, HistoryEntry, OnlineStatus
-import config
 
 
 class Database:

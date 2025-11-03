@@ -1,9 +1,15 @@
 """Сервис отслеживания изменений"""
 import logging
 from typing import List, Dict, Optional
-from database import db
-from services.shikimori_parser import parser
 
+
+from database import db
+from database.models import TrackedProfile, TrackedProfile
+
+from sqlalchemy import select
+
+from services.shikimori_parser import parser
+                
 logger = logging.getLogger(__name__)
 
 
@@ -58,9 +64,7 @@ class ProfileTracker:
                 logger.info(
                     f"Обнаружена смена никнейма: {shikimori_username} -> {current_username}")
                 # Обновляем никнейм в БД
-                from database.models import TrackedProfile
                 async with db.session_maker() as session:
-                    from sqlalchemy import select
                     stmt = select(TrackedProfile).where(
                         TrackedProfile.id == profile_id)
                     result_db = await session.execute(stmt)
@@ -70,9 +74,7 @@ class ProfileTracker:
                         await session.commit()
 
             # Получаем предыдущий статус из БД
-            from database.models import TrackedProfile
             async with db.session_maker() as session:
-                from sqlalchemy import select
                 stmt = select(TrackedProfile).where(
                     TrackedProfile.id == profile_id)
                 result_db = await session.execute(stmt)

@@ -1,5 +1,6 @@
 """Обработчики для управления профилями"""
 from aiogram import Router, F
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import Message, CallbackQuery, InlineKeyboardButton
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -74,11 +75,28 @@ async def process_username(message: Message, state: FSMContext):
         )
         return
 
+    # Проверяем, не добавлен ли уже этот профиль
+    profile_info = data.get('profile_info', {})
+    shikimori_user_id = profile_info.get('user_id')
+
+    # Проверяем существование в БД
+    existing_profiles = await db.get_user_profiles(message.from_user.id)
+    for existing in existing_profiles:
+        # Проверяем по ID или по username
+        if (shikimori_user_id and existing.shikimori_user_id == shikimori_user_id) or \
+           (existing.shikimori_username.lower() == username.lower()):
+            await status_msg.edit_text(
+                f"ℹ️ <b>Профиль уже добавлен</b>\n\n"
+                f"Пользователь <b>{username}</b> уже находится в вашем списке отслеживания.\n\n"
+                f"Вы можете настроить уведомления в меню профиля.",
+                reply_markup=profile_menu_keyboard(existing.id),
+                parse_mode='HTML'
+            )
+            await state.clear()
+            return
+
     # Добавляем профиль в БД
     try:
-        profile_info = data.get('profile_info', {})
-        shikimori_user_id = profile_info.get('user_id')
-
         profile = await db.add_tracked_profile(
             user_id=message.from_user.id,
             shikimori_username=username,
@@ -86,7 +104,6 @@ async def process_username(message: Message, state: FSMContext):
         )
 
         online_status = data.get('online_status', {})
-        profile_info = data.get('profile_info', {})
 
         text = (
             f"✅ <b>Профиль добавлен!</b>\n\n"
@@ -125,7 +142,6 @@ async def show_my_profiles(callback: CallbackQuery):
             "Добавьте первый профиль для начала работы!"
         )
         # Создаем клавиатуру с кнопкой добавления
-        from aiogram.utils.keyboard import InlineKeyboardBuilder
         builder = InlineKeyboardBuilder()
         builder.row(
             InlineKeyboardButton(text="➕ Добавить профиль",
@@ -148,10 +164,36 @@ async def show_my_profiles(callback: CallbackQuery):
         )
         await callback.message.edit_text(
             text=text,
-            reply_markup=profiles_list_keyboard(profiles),
+            reply_markup=profiles_list_keyboard(profiles, page=0),
             parse_mode='HTML'
         )
 
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith('profiles_page:'))
+async def profiles_pagination(callback: CallbackQuery):
+    """Обработка пагинации профилей"""
+    page = int(callback.data.split(':')[1])
+
+    profiles = await db.get_user_profiles(callback.from_user.id)
+
+    text = (
+        f"📋 <b>Ваши профили</b> ({len(profiles)})\n\n"
+        "Выберите профиль для управления:"
+    )
+
+    await callback.message.edit_text(
+        text=text,
+        reply_markup=profiles_list_keyboard(profiles, page=page),
+        parse_mode='HTML'
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == 'noop')
+async def noop_callback(callback: CallbackQuery):
+    """Пустой callback для индикатора страницы"""
     await callback.answer()
 
 
